@@ -1,10 +1,10 @@
 {
-  "name": "gitbook-plugin-copyright",
-  "version": "0.4.1",
+  "name": "gitbook-plugin-copyright-v",
+  "version": "0.4.4",
   "description": "基于Gitbook实现的版权保护插件,用于复制内容时追加版本信息以及文章末尾添加版权小尾巴",
   "main": "index.js",
   "scripts": {
-    "test": "echo welcome to use gitbook-plugin-copyright created by snowdreams1006"
+    "test": "echo welcome to use gitbook-plugin-copyright created by crazycodeboy"
   },
   "engines": {
     "gitbook": ">=2.4.3"
@@ -45,12 +45,18 @@
         "title": "Whether to append copyright information when copying content,true or false",
         "required": false,
         "default": true
+      },
+      "enableFooter": {
+        "type": "boolean",
+        "title": "Whether to enable footer",
+        "required": false,
+        "default": false
       }
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snowdreams1006/gitbook-plugin-copyright.git"
+    "url": "git+https://github.com/crazycodeboy/gitbook-plugin-copyright.git"
   },
   "keywords": [
     "gitbook-plugin-copyright",
@@ -60,12 +66,12 @@
     "wechat"
   ],
   "author": {
-    "name": "snowdreams1006",
-    "email": "snowdreams1006@163.com"
+    "name": "crazycodeboy",
+    "email": "crazycodeboy@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/snowdreams1006/gitbook-plugin-copyright/issues"
+    "url": "https://github.com/crazycodeboy/gitbook-plugin-copyright/issues"
   },
-  "homepage": "https://snowdreams1006.github.io/gitbook-plugin-copyright/"
+  "homepage": "https://github.com/crazycodeboy/gitbook-plugin-copyright"
 }

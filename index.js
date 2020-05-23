@@ -8,15 +8,15 @@ module.exports = {
         ]
     },
     hooks: {
-        "init": function() {
-            this.log.debug.ln('init', this.options.pluginsConfig.copyright);
+        "init": function () {
+            this.log.debug.ln('init', this.options.pluginsConfig['copyright-v']);
 
-            copyrightConfig = this.options.pluginsConfig.copyright;
+            copyrightConfig = this.options.pluginsConfig['copyright-v'];
         },
-        "page:before": function(page) {
+        "page:before": function (page) {
             this.log.debug.ln('page:before', JSON.stringify(page.content));
 
-            if (copyrightConfig) {
+            if (copyrightConfig && copyrightConfig.enableFooter) {
                 var site = copyrightConfig.site;
                 if (site.slice(-1) != "/") {
                     site += '/';
@@ -48,8 +48,8 @@ module.exports = {
                 if (image) {
                     copyright += `\n![${image}](${image})`;
                 }
-
-                page.content = page.content + copyright;
+                var hr = '<div style="border-top: 1px solid #ccc;"></div>';
+                page.content = page.content + hr + copyright;
             }
 
             return page;
